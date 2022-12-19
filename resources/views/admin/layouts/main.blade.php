@@ -23,6 +23,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'">
 
@@ -102,8 +103,15 @@
 <script src="{{asset('lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
 <script src="{{asset('lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
 <script src="https://kit.fontawesome.com/bc308ea13d.js" crossorigin="anonymous"></script>
+!-- Summernote -->
+<script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
 <!-- Template Javascript -->
 <script src="{{asset('js/main.js')}}"></script>
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+</script>
 </body>
 
 </html>

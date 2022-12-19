@@ -13,12 +13,8 @@ class ShowController extends Controller
     public function __invoke(Post $post)
     {
         $date = Carbon::parse($post->created_at);
-        $relatedPosts = Post::where('category_id', $post->category_id)
-            ->where('id', '!=', $post->id)
-            ->get()
-            ->take(4);
         $categories = Category::all();
-
-        return view('post.show', compact('post', 'date', 'relatedPosts', 'categories'));
+        $randomPosts = Post::get()->random(6);
+        return view('post.show', compact('post', 'date', 'randomPosts', 'categories'));
     }
 }
