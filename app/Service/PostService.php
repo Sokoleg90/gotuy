@@ -25,7 +25,7 @@ class PostService
             DB::commit();
         } catch (\Exception $exception) {
             DB::rollBack();
-            abort('500');
+            abort(500);
         }
     }
 
@@ -33,10 +33,9 @@ class PostService
     {
         try {
             DB::beginTransaction();
-            if ($data['tag_ids']) {
-                $tagIds = $data['tag_ids'];
-                unset($data['tag_ids']);
-            }
+                /*$tagIds = $data['tag_ids'];
+                unset($data['tag_ids']);*/
+
             if (isset($data['preview_image'])) {
                 $data['preview_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
             }
@@ -44,9 +43,8 @@ class PostService
                 $data['main_image'] = Storage::disk('public')->put('/images', $data['main_image']);
             }
             $post->update($data);
-            if ($tagIds) {
-                $post->tags()->sync($tagIds);
-            }
+            /*$post->tags()->sync($tagIds);*/
+
             DB::commit();
         } catch (\Exception $exception) {
             DB::rollBack();

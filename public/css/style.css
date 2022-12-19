@@ -14,6 +14,7 @@
 }
 
 
+
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -275,3 +276,4 @@
     background: var(--dark);
     border-color: var(--primary);
 }
+

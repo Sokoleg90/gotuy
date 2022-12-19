@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Startup - Startup Website Template</title>
+    <title>Готуй в Україні</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -21,14 +21,15 @@
     <link href="{{asset('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css')}}" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="{{asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-    <link href="{{asset('lib/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('lib1/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('lib1/animate/animate.min.css')}}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css1/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css1/animate.css')}}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css1/style.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -39,14 +40,13 @@
 <!-- Spinner End -->
 
 <!-- Navbar Start -->
-<div class="container-fluid position-relative p-0">
-    <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+<div class="container-fluid position-relative p-0 ">
+    <div class="container-fluid bg-primary py-5 bg-header">
         <div class="row py-5">
             <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                 <h1 class="display-4 text-white animated zoomIn">Готуй in Ukraine</h1>
                 <a href="{{route('post.index')}}" class="h5 text-white">Головна сторінка</a>
-                <i class="far fa-circle text-white px-2"></i>
-                <a href="" class="h5 text-white">Категорії рецептів</a>
+
             </div>
         </div>
     </div>
@@ -101,14 +101,17 @@
 <!-- JavaScript Libraries -->
 <script src="{{asset('https://code.jquery.com/jquery-3.4.1.min.js')}}"></script>
 <script src="{{asset('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('lib/wow/wow.min.js')}}"></script>
-<script src="{{asset('lib/easing/easing.min.js')}}"></script>
-<script src="{{asset('lib/waypoints/waypoints.min.js')}}"></script>
-<script src="{{asset('lib/counterup/counterup.min.js')}}"></script>
-<script src="{{asset('lib/owlcarousel/owl.carousel.min.js')}}"></script>
+<script src="{{asset('lib1/wow/wow.min.js')}}"></script>
+<script src="{{asset('lib1/easing/easing.min.js')}}"></script>
+<script src="{{asset('lib1/waypoints/waypoints.min.js')}}"></script>
+<script src="{{asset('lib1/counterup/counterup.min.js')}}"></script>
+<script src="{{asset('lib1/owlcarousel/owl.carousel.min.js')}}"></script>
+<script src="{{asset('lib1/animate/animate.min.css')}}"></script>
+<script src="{{asset('lib1/animate/animate.min.css')}}"></script>
 
 <!-- Template Javascript -->
-<script src="{{asset('js/main.js')}}"></script>
+
+<script src="{{asset('js1/main.js')}}"></script>
 </body>
 
 </html>
