@@ -76,6 +76,12 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 
         Route::patch('/{user}', 'UpdateController')->name('admin.user.update');
         Route::delete('/{user}', 'DestroyController')->name('admin.user.destroy');
     });
+    Route::group(['namespace' => 'Comment', 'prefix' => 'comment'], function () {
+        Route::get('/', 'IndexController')->name('admin.comment.index');
+        Route::get('/{comment}/edit', 'EditController')->name('admin.comment.edit');
+        Route::patch('/{comment}', 'UpdateController')->name('admin.comment.update');
+        Route::delete('/{comment}', 'DestroyController')->name('admin.comment.destroy');
+    });
 });
 Auth::routes();
 
