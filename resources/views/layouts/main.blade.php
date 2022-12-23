@@ -19,7 +19,7 @@
     <!-- Icon Font Stylesheet -->
     <link href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css')}}" rel="stylesheet">
     <link href="{{asset('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css')}}" rel="stylesheet">
-
+    <link  href="{{asset('vendors/flag-icon-css/css/flag-icon.min.css')}}" rel="stylesheet">
     <!-- Libraries Stylesheet -->
     <link href="{{asset('lib1/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
     <link href="{{asset('lib1/animate/animate.min.css')}}" rel="stylesheet">
@@ -30,6 +30,8 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('css1/style.css')}}" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -42,11 +44,19 @@
 <!-- Navbar Start -->
 <div class="container-fluid position-relative p-0 ">
     <div class="container-fluid bg-primary py-5 bg-header">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked="">
+                <label class="btn btn-outline-warning" for="btnradio1">Українська мова</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-warning" for="btnradio2"><a href="{{route('ru.post.index')}}">Русский язык</a></label>
+            </div>
+        </div>
         <div class="row py-5">
             <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                 <h1 class="display-4 text-white animated zoomIn">Готуй in Ukraine</h1>
                 <a href="{{route('post.index')}}" class="h5 text-white">Головна сторінка</a>
-
             </div>
         </div>
     </div>

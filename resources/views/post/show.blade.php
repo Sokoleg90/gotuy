@@ -4,7 +4,7 @@
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-8">
+                <div class="col-lg-7">
                     <!-- Blog Detail Start -->
                     <div class="mb-5">
                         <img class="img-fluid w-100 rounded mb-5" src="{{asset('storage/' . $post->main_image)}}" alt="">

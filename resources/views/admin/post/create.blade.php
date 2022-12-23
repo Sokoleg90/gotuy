@@ -12,7 +12,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{route('admin.main.index')}}">Главная</a></li>
-                            <li class="breadcrumb-item"><a href="{{route('admin.category.index')}}">Посты</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('admin.post.index')}}">Посты</a></li>
                             <li class="breadcrumb-item active">Создание поста</li>
                         </ol>
                     </div><!--col -->
@@ -101,7 +101,7 @@
                                 <div class="text-danger">{{$message}}</div>
                                 @enderror
                             </div>
-                            <div class="form-group">
+                            <div class="form-group mb-5">
                             <input type="submit" class="btn btn-primary" value="Добавить">
                             </div>
                         </form>
