@@ -8,7 +8,7 @@
                 <div class="col-lg-8">
                     <div class="row g-5">
                         @foreach($posts as $post)
-                            <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
+                            <div class="col-md-4 wow slideInUp" data-wow-delay="0.1s">
                                 <div class="blog-item bg-light rounded overflow-hidden">
                                     <div class="blog-img position-relative overflow-hidden">
                                         <img class="img-fluid" src="{{'storage/' . $post->preview_image}}" alt="">
