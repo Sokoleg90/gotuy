@@ -13,7 +13,7 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $data=[];
+        $data = [];
         $data['usersCount'] = User::all()->count();
         $data['postsCount'] = Post::all()->count();
         $data['categoriesCount'] = Category::all()->count();
