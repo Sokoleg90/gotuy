@@ -5,37 +5,64 @@
         <div class="row g-4">
             <div class="col-sm-6 col-xl-3">
                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                    <i class="fa fa-chart-line fa-3x text-primary"></i>
+                    <i class="fa-solid fa-users"></i>
                     <div class="ms-3">
-                        <p class="mb-2">Today Sale</p>
-                        <h6 class="mb-0">$1234</h6>
+                        <h3>{{$data['usersCount']}}</h3>
+                        <p>Пользователи</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-xl-3">
                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                    <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                    <i class="fa-regular fa-clipboard"></i>
                     <div class="ms-3">
-                        <p class="mb-2">Total Sale</p>
-                        <h6 class="mb-0">$1234</h6>
+                        <p>Посты</p>
+                        <h3>{{$data['postsCount']}}</h3>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-xl-3">
                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                    <i class="fa fa-chart-area fa-3x text-primary"></i>
+                    <i class="nav-icon fa-solid fa-list"></i>
                     <div class="ms-3">
-                        <p class="mb-2">Today Revenue</p>
-                        <h6 class="mb-0">$1234</h6>
+                        <p>Категории</p>
+                        <h3>{{$data['categoriesCount']}}</h3>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-xl-3">
                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                    <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                    <i class="fa-solid fa-tags"></i>
                     <div class="ms-3">
-                        <p class="mb-2">Total Revenue</p>
-                        <h6 class="mb-0">$1234</h6>
+                        <p>Теги</p>
+                        <h3>{{$data['tagsCount']}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa-solid fa-tags"></i>
+                    <div class="ms-3">
+                        <p>Посты на русском языке</p>
+                        <h3>{{$data['ruPostsCount']}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa-solid fa-tags"></i>
+                    <div class="ms-3">
+                        <p>Категории на русском языке</p>
+                        <h3>{{ $data['ruCategoriesCount']}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa-solid fa-tags"></i>
+                    <div class="ms-3">
+                        <p>Теги на русском языке</p>
+                        <h3>{{$data['ruTagsCount']}}</h3>
                     </div>
                 </div>
             </div>
