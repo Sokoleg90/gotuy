@@ -1,17 +1,19 @@
 @extends('ru.layouts.main')
 @section('content')
     <!-- Blog Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid py-5 bg-light">
         <div class="container py-5">
             <div class="row g-5">
                 <!-- Blog list Start -->
                 <div class="col-lg-8">
                     <div class="row g-5">
                         @foreach($posts as $post)
-                            <div class="col-md-4 wow slideInUp" data-wow-delay="0.1s">
+                            <div class="col-md-4 wow">
                                 <div class="blog-item bg-light rounded overflow-hidden">
                                     <div class="blog-img position-relative overflow-hidden">
+                                        <a href="{{route('ru.post.show', $post->id)}}"><img class="img-fluid" src="{{'storage/' . $post->preview_image}}" alt="">
                                         <img class="img-fluid" src="{{asset('storage/' . $post->preview_image)}}" alt="">
+                                        </a>
                                     </div>
                                     <div class="p-4">
                                         <a href="{{route('ru.post.show', $post->id)}}" class="blog-post-permalink">
@@ -24,7 +26,7 @@
                     </div>
 
                     <div class="m-auto">
-                        {{$posts->links()}}
+                        {{$posts->links('vendor.pagination.bootstrap-5-ru')}}
                     </div>
 
                 </div>
@@ -34,7 +36,7 @@
                 <div class="col-lg-4">
 
                     <!-- Category Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="mb-5">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h3 class="mb-0">Категории рецептов</h3>
                         </div>
@@ -47,11 +49,10 @@
                         </div>
                     </div>
                     <!-- Category End -->
-
                     <!-- Recent Post Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="mb-5">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Приготовь наугад(случайные рецепты)</h3>
+                            <h3 class="mb-0">Приготовь наугад</h3>
                         </div>
                         @foreach($randomPosts as $post)
                         <div class="d-flex rounded overflow-hidden mb-3">
@@ -62,7 +63,6 @@
                         @endforeach
                     </div>
                     <!-- Recent Post End -->
-
                 </div>
                 <!-- Sidebar End -->
             </div>

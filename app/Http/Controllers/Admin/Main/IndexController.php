@@ -5,9 +5,7 @@ namespace App\Http\Controllers\Admin\Main;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
-use App\Models\Tag;
 use App\Models\User;
-use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
@@ -19,8 +17,6 @@ class IndexController extends Controller
         $data['ruPostsCount'] = \App\Models\Ru\Post::all()->count();
         $data['categoriesCount'] = Category::all()->count();
         $data['ruCategoriesCount'] = \App\Models\Ru\Category::all()->count();
-        $data['tagsCount'] = Tag::all()->count();
-        $data['ruTagsCount'] = \App\Models\Ru\Tag::all()->count();
         return view('admin.main.index', compact('data'));
     }
 }

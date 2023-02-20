@@ -29,8 +29,6 @@ class StoreRequest extends FormRequest
             'preview_image' => 'required|file',
             'main_image' => 'required|file',
             'category_id' => 'required|integer|exists:categories,id',
-            'tag_ids' => 'nullable|array',
-            'tag_ids.*' => 'nullable|integer|exists:tags,id',
         ];
     }
 
@@ -48,7 +46,6 @@ class StoreRequest extends FormRequest
             'category_id.required' => 'Это поле обязательно для заполнения',
             'category_id.integer' => 'Id категории должен быть числом',
             'category_id.exists' => 'Id категории должен быть в базе данных',
-            'tag_ids.array' => 'Необходимо отправить массив данных'
         ];
     }
 }

@@ -1,17 +1,19 @@
 @extends('layouts.main')
 @section('content')
     <!-- Blog Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid py-5 bg-light">
         <div class="container py-5">
             <div class="row g-5">
                 <!-- Blog list Start -->
                 <div class="col-lg-8">
                     <div class="row g-5">
                         @foreach($posts as $post)
-                            <div class="col-md-4 wow slideInUp" data-wow-delay="0.1s">
+                            <div class="col-md-4">
                                 <div class="blog-item bg-light rounded overflow-hidden">
-                                    <div class="blog-img position-relative overflow-hidden">
-                                        <img class="img-fluid" src="{{'storage/' . $post->preview_image}}" alt="">
+                                    <div class="blog-img position-relative">
+                                        <a href="{{route('post.show', $post->id)}}">
+                                            <img class="img-fluid" src="{{'storage/' . $post->preview_image}}" alt="">
+                                        </a>
                                     </div>
                                     <div class="p-4">
                                         <a href="{{route('post.show', $post->id)}}" class="blog-post-permalink">
@@ -24,32 +26,27 @@
                     </div>
 
                     <div class="m-auto">
-                        {{$posts->links()}}
+                        {{$posts->links('vendor.pagination.bootstrap-5-ua')}}
                     </div>
 
                 </div>
                 <!-- Blog list End -->
-
                 <!-- Sidebar Start -->
                 <div class="col-lg-4">
-
                     <!-- Category Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="mb-5">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h3 class="mb-0">Категорії рецептів</h3>
                         </div>
-
                         <div class="link-animated d-flex flex-column justify-content-start">
                             @foreach($categories as $category)
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="{{route('category.post.index', $category->id)}}"><i
-                                    class=""></i>{{$category->title}}</a>
+                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="{{route('category.post.index', $category->id)}}">{{$category->title}}</a>
                             @endforeach
                         </div>
                     </div>
                     <!-- Category End -->
-
                     <!-- Recent Post Start -->
-                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="mb-5">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h3 class="mb-0">Приготуй навмання</h3>
                         </div>

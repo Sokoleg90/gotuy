@@ -1,7 +1,7 @@
 @extends('ru.layouts.main')
 @section('content')
     <!-- Blog Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid py-5 bg-light">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-8">

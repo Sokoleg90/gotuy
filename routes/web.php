@@ -81,15 +81,6 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 
         Route::patch('/{category}', 'UpdateController')->name('admin.category.update');
         Route::delete('/{category}', 'DestroyController')->name('admin.category.destroy');
     });
-    Route::group(['namespace' => 'Tag', 'prefix' => 'tag'], function () {
-        Route::get('/', 'IndexController')->name('admin.tag.index');
-        Route::get('/create', 'CreateController')->name('admin.tag.create');
-        Route::post('/', 'StoreController')->name('admin.tag.store');
-        Route::get('/{tag}', 'ShowController')->name('admin.tag.show');
-        Route::get('/{tag}/edit', 'EditController')->name('admin.tag.edit');
-        Route::patch('/{tag}', 'UpdateController')->name('admin.tag.update');
-        Route::delete('/{tag}', 'DestroyController')->name('admin.tag.destroy');
-    });
     Route::group(['namespace' => 'User', 'prefix' => 'users'], function () {
         Route::get('/', 'IndexController')->name('admin.user.index');
         Route::get('/create', 'CreateController')->name('admin.user.create');
@@ -124,15 +115,6 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 
         Route::get('/{category}/edit', 'EditController')->name('admin.ru.category.edit');
         Route::patch('/{category}', 'UpdateController')->name('admin.ru.category.update');
         Route::delete('/{category}', 'DestroyController')->name('admin.ru.category.destroy');
-    });
-    Route::group(['namespace' => 'Tag', 'prefix' => 'tag'], function () {
-        Route::get('/', 'IndexController')->name('admin.ru.tag.index');
-        Route::get('/create', 'CreateController')->name('admin.ru.tag.create');
-        Route::post('/', 'StoreController')->name('admin.ru.tag.store');
-        Route::get('/{tag}', 'ShowController')->name('admin.ru.tag.show');
-        Route::get('/{tag}/edit', 'EditController')->name('admin.ru.tag.edit');
-        Route::patch('/{tag}', 'UpdateController')->name('admin.ru.tag.update');
-        Route::delete('/{tag}', 'DestroyController')->name('admin.ru.tag.destroy');
     });
     Route::group(['namespace' => 'Comment', 'prefix' => 'comment'], function () {
         Route::get('/', 'IndexController')->name('admin.ru.comment.index');

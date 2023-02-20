@@ -29,7 +29,7 @@
                     <div class="col-12">
 
 
-                        <form action="{{route('admin.post.update', $post->id)}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('admin.ru.post.update', $post->id)}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
                             <div class="form-group w-25">

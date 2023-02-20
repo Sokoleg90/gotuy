@@ -21,8 +21,6 @@
             <a href="{{route('admin.ru.post.index')}}" class="nav-item nav-link"><i class="nav-icon fa-regular fa-clipboard"></i>Посты на русском языке</a>
             <a href="{{route('admin.category.index')}}" class="nav-item nav-link"><i class="nav-icon fa-solid fa-list"></i>Категории</a>
             <a href="{{route('admin.ru.category.index')}}" class="nav-item nav-link"><i class="nav-icon fa-solid fa-list"></i>Категории на русском языке</a>
-            <a href="{{route('admin.tag.index')}}" class="nav-item nav-link"><i class="nav-icon fa-solid fa-tags"></i>Теги</a>
-            <a href="{{route('admin.ru.tag.index')}}" class="nav-item nav-link"><i class="nav-icon fa-solid fa-tags"></i>Теги на русском языке</a>
             <a href="{{route('admin.comment.index')}}" class="nav-item nav-link"><i class="nav-icon fa-regular fa-comment"></i>Комментарии</a>
             <a href="{{route('admin.ru.comment.index')}}" class="nav-item nav-link"><i class="nav-icon fa-regular fa-comment"></i>Комментарии на русском языке</a>
             </div>

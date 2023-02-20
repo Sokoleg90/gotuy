@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin\Ru\Post;
 
-
 use App\Models\Ru\Post;
 
 class ShowController extends BaseController

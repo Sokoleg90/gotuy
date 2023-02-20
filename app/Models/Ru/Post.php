@@ -17,11 +17,6 @@ class Post extends Model
     protected $table = 'ru_posts';
     protected $guarded = false;
 
-    public function tags()
-    {
-        return $this->belongsToMany(\App\Models\Ru\Tag::class, 'ru_post_tags', 'post_id', 'tag_id');
-    }
-
     public function category()
     {
         return $this->belongsTo(\App\Models\Ru\Category::class, 'category_id', 'id');
