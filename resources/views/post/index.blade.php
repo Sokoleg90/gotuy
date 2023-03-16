@@ -12,7 +12,7 @@
                                 <div class="blog-item bg-light rounded overflow-hidden">
                                     <div class="blog-img position-relative">
                                         <a href="{{route('post.show', $post->id)}}">
-                                            <img class="img-fluid" src="{{'storage/' . $post->preview_image}}" alt="">
+                                            <img class="img-fluid" src="{{asset('storage/' . $post->preview_image)}}" alt="">
                                         </a>
                                     </div>
                                     <div class="p-4">
@@ -52,7 +52,7 @@
                         </div>
                         @foreach($randomPosts as $post)
                         <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="{{'storage/' . $post->preview_image}}"
+                            <img class="img-fluid" src="{{asset('storage/' . $post->preview_image)}}"
                                  style="width: 100px; height: 100px; object-fit: cover;" alt="">
                             <a href="{{route('post.show', $post->id)}}" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">{{$post->title}}</a>
                         </div>

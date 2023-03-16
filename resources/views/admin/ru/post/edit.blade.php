@@ -97,17 +97,6 @@
                                 <div class="text-danger">{{$message}}</div>
                                 @enderror
                             </div>
-                            <div class="form-group">
-                                <label>Теги</label>
-                                <select class="select2" name="tag_ids[]" multiple="multiple" data-placeholder="Выберите теги" style="width: 100%;">
-                                    @foreach($tags as $tag)
-                                        <option {{is_array($post->tags->pluck('id')->toArray()) && in_array($tag->id, $post->tags->pluck('id')->toArray()) ? 'selected' : ''}} value="{{$tag->id}}">{{$tag->title}}</option>
-                                    @endforeach
-                                </select>
-                                @error('tag_ids')
-                                <div class="text-danger">{{$message}}</div>
-                                @enderror
-                            </div>
                             <div class="form-group mb-5">
                                 <input type="submit" class="btn btn-primary" value="Обновить">
                             </div>

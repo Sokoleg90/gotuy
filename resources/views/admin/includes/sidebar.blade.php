@@ -17,11 +17,11 @@
         <div class="navbar-nav w-100">
             <a href="{{route('admin.main.index')}}" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Главная</a>
             <a href="{{route('admin.user.index')}}" class="nav-item nav-link"><i class="nav-icon fa-solid fa-users"></i>Пользователи</a>
-            <a href="{{route('admin.post.index')}}" class="nav-item nav-link"><i class="nav-icon fa-regular fa-clipboard"></i>Посты</a>
+            <a href="{{route('admin.post.index')}}" class="nav-item nav-link"><i class="nav-icon fa-regular fa-clipboard"></i>Посты на украинском языке</a>
             <a href="{{route('admin.ru.post.index')}}" class="nav-item nav-link"><i class="nav-icon fa-regular fa-clipboard"></i>Посты на русском языке</a>
-            <a href="{{route('admin.category.index')}}" class="nav-item nav-link"><i class="nav-icon fa-solid fa-list"></i>Категории</a>
+            <a href="{{route('admin.category.index')}}" class="nav-item nav-link"><i class="nav-icon fa-solid fa-list"></i>Категории на украинском языке</a>
             <a href="{{route('admin.ru.category.index')}}" class="nav-item nav-link"><i class="nav-icon fa-solid fa-list"></i>Категории на русском языке</a>
-            <a href="{{route('admin.comment.index')}}" class="nav-item nav-link"><i class="nav-icon fa-regular fa-comment"></i>Комментарии</a>
+            <a href="{{route('admin.comment.index')}}" class="nav-item nav-link"><i class="nav-icon fa-regular fa-comment"></i>Комментарии на украинском языке</a>
             <a href="{{route('admin.ru.comment.index')}}" class="nav-item nav-link"><i class="nav-icon fa-regular fa-comment"></i>Комментарии на русском языке</a>
             </div>
     </nav>

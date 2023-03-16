@@ -2,13 +2,26 @@
 <html lang="en">
 
 <head>
+    <link rel="alternate" hreflang="uk" href="https://www.gotuy.in.ua/"/>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6NJR2SX55"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-E6NJR2SX55');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1207883767393921"
+            crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <title>Готуй в Україні</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="" name="keywords">
+    <meta content="Смачні страви, приготовані в Україні" name="description">
+
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
