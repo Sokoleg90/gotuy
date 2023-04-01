@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Models\Ru;
-
+namespace App\Models\En;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -12,10 +11,10 @@ class Category extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $table = 'ru_categories';
+    protected $table = 'en_categories';
     protected $guarded = false;
 
     public function posts(){
-        return $this->hasMany(\App\Models\Ru\Post::class, 'category_id', 'id');
+        return $this->hasMany(\App\Models\En\Post::class, 'category_id', 'id');
     }
 }

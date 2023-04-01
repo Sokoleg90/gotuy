@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="alternate" hreflang="ru" href="https://www.gotuy.in.ua/ru/"/>
+    <link rel="alternate" hreflang="en" href="https://www.gotuy.in.ua/en/"/>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6NJR2SX55"></script>
     <script>
@@ -15,10 +15,10 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1207883767393921"
             crossorigin="anonymous"></script>
     <meta charset="utf-8">
-    <title>Готовь в Украине</title>
+    <title>Сook in Ukraine</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="Вкусные блюда, приготовленные в Украине" name="description">
+    <meta content="Delicious dishes cooked in Ukraine" name="description">
 
     <!-- Favicon -->
     <link href="{{asset('img/favicon.ico')}}" rel="icon">
@@ -59,19 +59,19 @@
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <div class="btn-group" role="group">
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked="">
-                <label class="btn btn-outline-warning" for="btnradio1">Русский язык</label>
+                <label class="btn btn-outline-warning" for="btnradio1">English</label>
 
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                 <label class="btn btn-outline-warning" for="btnradio2"><a href="{{route('post.index')}}">Українська мова</a></label>
 
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                <label class="btn btn-outline-warning" for="btnradio3"><a href="{{route('en.post.index')}}">English</a></label>
+                <label class="btn btn-outline-warning" for="btnradio3"><a href="{{route('ru.post.index')}}">Русский язык</a></label>
             </div>
         </div>
         <div class="row py-5">
             <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                <h1 class="display-4 text-white animated zoomIn">Готовь in Ukraine</h1>
-                <a href="{{route('ru.post.index')}}" class="h5 text-white">Главная страница</a>
+                <h1 class="display-4 text-white animated zoomIn">Cook in Ukraine</h1>
+                <a href="{{route('en.post.index')}}" class="h5 text-white">Home page</a>
 
             </div>
         </div>
@@ -108,7 +108,7 @@
         <div class="row justify-content-end">
             <div class="col-lg-8 col-md-6">
                 <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                    <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">gotuy.in.ua/ru</a>. All Rights Reserved.
+                    <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">gotuy.in.ua/en</a>. All Rights Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>

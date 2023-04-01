@@ -7,13 +7,13 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Редактирование поста</h1>
+                        <h1 class="m-0">Редактирование поста на английском языке</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{route('admin.main.index')}}">Главная</a></li>
-                            <li class="breadcrumb-item"><a href="{{route('admin.ru.category.index')}}">Посты</a></li>
-                            <li class="breadcrumb-item active">Редактирование поста {{$post->title}}</li>
+                            <li class="breadcrumb-item"><a href="{{route('admin.en.category.index')}}">Посты на английском</a></li>
+                            <li class="breadcrumb-item active">Редактирование поста на английском{{$post->title}}</li>
                         </ol>
                     </div><!--col -->
                 </div><!--/.row -->
@@ -25,11 +25,8 @@
             <div class="container-fluid">
                 <!--Small boxes (Start box) -->
                 <div class="row">
-
                     <div class="col-12">
-
-
-                        <form action="{{route('admin.ru.post.update', $post->id)}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('admin.en.post.update', $post->id)}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
                             <div class="form-group w-25">
@@ -105,8 +102,6 @@
                     </div><!--./col -->
                 </div><!--/.row -->
             </div><!--container-fluid -->
-
-
         </section>
         <!-- /.content -->
     </div>

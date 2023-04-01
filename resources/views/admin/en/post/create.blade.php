@@ -7,13 +7,13 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Редактирование поста</h1>
+                        <h1 class="m-0">Добавление поста на английском языке</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{route('admin.main.index')}}">Главная</a></li>
-                            <li class="breadcrumb-item"><a href="{{route('admin.ru.category.index')}}">Посты</a></li>
-                            <li class="breadcrumb-item active">Редактирование поста {{$post->title}}</li>
+                            <li class="breadcrumb-item"><a href="{{route('admin.en.post.index')}}">Посты на английском</a></li>
+                            <li class="breadcrumb-item active">Создание поста</li>
                         </ol>
                     </div><!--col -->
                 </div><!--/.row -->
@@ -25,24 +25,20 @@
             <div class="container-fluid">
                 <!--Small boxes (Start box) -->
                 <div class="row">
-
                     <div class="col-12">
-
-
-                        <form action="{{route('admin.ru.post.update', $post->id)}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('admin.en.post.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
-                            @method('PATCH')
                             <div class="form-group w-25">
                                 <input type="text" class="form-control" name="title" placeholder="Название поста"
-                                       value="{{old('title', $post->title)}}"
+                                value="{{old('title')}}"
                                 >
-                                @error('title')
+                            @error('title')
                                 <div class="text-danger">{{$message}}</div>
                                 @enderror
                             </div>
-                            <div class="form-group">
+                            <div class="form-group mt-3">
                                 <textarea id="summernote" name="content">
-                                    {{old('content', $post->content)}}
+                                    {{old('content')}}
                                 </textarea>
                                 @error('content')
                                 <div class="text-danger">{{$message}}</div>
@@ -50,9 +46,6 @@
                             </div>
                             <div class="form-group w-50">
                                 <label for="exampleInputFile">Добавить превью</label>
-                                <div class="w-50 mb-2">
-                                    <img src="{{url('storage/' . $post->preview_image)}}" alt="preview_image" class="w-50">
-                                </div>
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input" name="preview_image">
@@ -68,9 +61,6 @@
                             </div>
                             <div class="form-group w-50">
                                 <label for="exampleInputFile">Добавить главное изображение</label>
-                                <div class="w-50 mb-2">
-                                    <img src="{{url('storage/' . $post->main_image)}}" alt="main_image" class="w-50">
-                                </div>
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input" name="main_image">
@@ -88,9 +78,9 @@
                                 <label>Выберите категорию</label>
                                 <select name="category_id" class="form-control">
                                     @foreach($categories as $category)
-                                        <option value={{$category->id}}
-                                            {{$category->id == $post->category_id ? 'selected' : ''}}
-                                        >{{$category->title}}</option>
+                                    <option value={{$category->id}}
+                                    {{$category->id == old('category_id') ? 'selected' : ''}}
+                                    >{{$category->title}}</option>
                                     @endforeach
                                 </select>
                                 @error('category_id')
@@ -98,7 +88,7 @@
                                 @enderror
                             </div>
                             <div class="form-group mb-5">
-                                <input type="submit" class="btn btn-primary" value="Обновить">
+                            <input type="submit" class="btn btn-primary" value="Добавить">
                             </div>
                         </form>
 

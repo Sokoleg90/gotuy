@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Ru\Category;
+namespace App\Http\Controllers\Admin\En\Category;
 
 use App\Http\Controllers\Controller;
-use App\Models\Ru\Category;
+use App\Models\En\Category;
 
 
 class IndexController extends Controller
@@ -11,6 +11,6 @@ class IndexController extends Controller
     public function __invoke()
     {
         $categories = Category::all();
-        return view('ru.category.index', compact('categories'));
+        return view('admin.en.category.index', compact('categories'));
     }
 }
