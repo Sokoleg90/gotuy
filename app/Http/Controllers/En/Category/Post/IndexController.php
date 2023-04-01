@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Ru\Category\Post;
+namespace App\Http\Controllers\En\Category\Post;
 
 use App\Http\Controllers\Controller;
-use App\Models\Ru\Category;
-use App\Models\Ru\Post;
-
+use App\Models\En\Category;
+use App\Models\En\Post;
 
 class IndexController extends Controller
 {
@@ -14,6 +13,6 @@ class IndexController extends Controller
         $posts = $category->posts()->paginate(9);
         $categories = Category::all();
         $randomPosts = Post::get()->random(6);
-        return view('ru.category.post.index', compact('posts', 'categories', 'randomPosts'));
+        return view('en.category.post.index', compact('posts', 'categories', 'randomPosts'));
     }
 }

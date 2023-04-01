@@ -7,9 +7,9 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6 d-flex align-items-center">
-                        <h1 class="m-0 mr-2">{{$post->title}}</h1>
-                        <a href="{{route('admin.ru.post.edit', $post->id)}}" class="text-success"><i class="fa-solid fa-pencil"></i></a>
-                        <form action="{{route('admin.ru.post.destroy', $post->id)}}" method="POST">
+                        <h1 class="m-0 mr-2">{{$category->title}}</h1>
+                        <a href="{{route('admin.en.category.edit', $category->id)}}" class="text-success"><i class="fa-solid fa-pencil"></i></a>
+                        <form action="{{route('admin.en.category.destroy', $category->id)}}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="border-0 bg-transparent">
@@ -20,8 +20,8 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{route('admin.main.index')}}">Главная</a></li>
-                            <li class="breadcrumb-item"><a href="{{route('admin.ru.post.index')}}">Посты</a></li>
-                            <li class="breadcrumb-item active">{{$post->title}}</li>
+                            <li class="breadcrumb-item"><a href="{{route('admin.ru.category.index')}}">Категории на английском</a></li>
+                            <li class="breadcrumb-item active">{{$category->title}}</li>
                         </ol>
                     </div><!--col -->
                 </div><!--/.row -->
@@ -41,11 +41,11 @@
                                     <tbody>
                                     <tr>
                                         <td>ID</td>
-                                        <td>{{$post->id}}</td>
+                                        <td>{{$category->id}}</td>
                                     </tr>
                                     <tr>
                                         <td>Название</td>
-                                        <td>{{$post->title}}</td>
+                                        <td>{{$category->title}}</td>
                                     </tr>
                                     </tbody>
                                 </table>

@@ -7,11 +7,11 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Комментарии</h1>
+                    <h1 class="m-0">Комментарии на английском языке</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item active">Комментарии</li>
+                        <li class="breadcrumb-item active">Комментарии на английском</li>
                     </ol>
                 </div><!--col -->
             </div><!--/.row -->
@@ -36,9 +36,9 @@
                                         <td>{{$comment->id}}</td>
                                         <td>{{$comment->name}}</td>
                                         <td>{{$comment->message}}</td>
-                                        <td><a href="{{route('admin.ru.comment.edit', $comment->id)}}" class="text-success"><i class="fa-solid fa-pencil"></i></a></td>
+                                        <td><a href="{{route('admin.en.comment.edit', $comment->id)}}" class="text-success"><i class="fa-solid fa-pencil"></i></a></td>
                                         <td>
-                                            <form action="{{route('admin.ru.comment.destroy', $comment->id)}}" method="POST">
+                                            <form action="{{route('admin.en.comment.destroy', $comment->id)}}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="border-0 bg-transparent">
