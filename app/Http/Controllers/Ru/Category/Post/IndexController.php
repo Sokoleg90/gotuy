@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Ru\Category\Post;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 use App\Models\Ru\Category;
-use App\Models\Ru\Post;
 
 
 class IndexController extends Controller

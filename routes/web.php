@@ -30,6 +30,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Post', 'prefix' => 'posts'], 
 
 //Category
 Route::group(['namespace' => 'App\Http\Controllers\Category', 'prefix' => 'categories'], function () {
+    Route::get('/', 'IndexController')->name('category.index');
     Route::group(['namespace' => 'Post', 'prefix' => '{category}/posts'], function () {
         Route::get('/', 'IndexController')->name('category.post.index');
     });
@@ -49,27 +50,9 @@ Route::group(['namespace' => 'App\Http\Controllers\Ru', 'prefix' => 'ru'], funct
 
     //Category
     Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function () {
+        Route::get('/', 'IndexController')->name('ru.category.index');
         Route::group(['namespace' => 'Post', 'prefix' => '{category}/posts'], function () {
             Route::get('/', 'IndexController')->name('ru.category.post.index');
-        });
-    });
-});
-//Blog EN-lang
-//Posts
-Route::group(['namespace' => 'App\Http\Controllers\En', 'prefix' => 'en'], function () {
-    Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function () {
-        Route::get('/', 'IndexController')->name('en.post.index');
-        Route::get('/{post}', 'ShowController')->name('en.post.show');
-
-        Route::group(['namespace' => 'Comment', 'prefix' => '{post}/comments'], function () {
-            Route::post('/', 'StoreController')->name('en.post.comment.store');
-        });
-    });
-
-    //Category
-    Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function () {
-        Route::group(['namespace' => 'Post', 'prefix' => '{category}/posts'], function () {
-            Route::get('/', 'IndexController')->name('en.category.post.index');
         });
     });
 });
@@ -139,33 +122,6 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 
         Route::patch('/{comment}', 'UpdateController')->name('admin.ru.comment.update');
         Route::delete('/{comment}', 'DestroyController')->name('admin.ru.comment.destroy');
     });
-    });
-    //Admin EN-lang
-    Route::group(['namespace' => 'En', 'prefix' => 'en'], function () {
-        Route::group(['namespace' => 'Post', 'prefix' => 'post'], function () {
-            Route::get('/', 'IndexController')->name('admin.en.post.index');
-            Route::get('/create', 'CreateController')->name('admin.en.post.create');
-            Route::post('/', 'StoreController')->name('admin.en.post.store');
-            Route::get('/{post}', 'ShowController')->name('admin.en.post.show');
-            Route::get('/{post}/edit', 'EditController')->name('admin.en.post.edit');
-            Route::patch('/{post}', 'UpdateController')->name('admin.en.post.update');
-            Route::delete('/{post}', 'DestroyController')->name('admin.en.post.destroy');
-        });
-        Route::group(['namespace' => 'Category', 'prefix' => 'category'], function () {
-            Route::get('/', 'IndexController')->name('admin.en.category.index');
-            Route::get('/create', 'CreateController')->name('admin.en.category.create');
-            Route::post('/', 'StoreController')->name('admin.en.category.store');
-            Route::get('/{category}', 'ShowController')->name('admin.en.category.show');
-            Route::get('/{category}/edit', 'EditController')->name('admin.en.category.edit');
-            Route::patch('/{category}', 'UpdateController')->name('admin.en.category.update');
-            Route::delete('/{category}', 'DestroyController')->name('admin.en.category.destroy');
-        });
-        Route::group(['namespace' => 'Comment', 'prefix' => 'comment'], function () {
-            Route::get('/', 'IndexController')->name('admin.en.comment.index');
-            Route::get('/{comment}/edit', 'EditController')->name('admin.en.comment.edit');
-            Route::patch('/{comment}', 'UpdateController')->name('admin.en.comment.update');
-            Route::delete('/{comment}', 'DestroyController')->name('admin.en.comment.destroy');
-        });
     });
 });
 Auth::routes();
