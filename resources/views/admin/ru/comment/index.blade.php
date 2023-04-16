@@ -36,9 +36,9 @@
                                         <td>{{$comment->id}}</td>
                                         <td>{{$comment->name}}</td>
                                         <td>{{$comment->message}}</td>
-                                        <td><a href="{{route('admin.ru.comment.edit', $comment->id)}}" class="text-success"><i class="fa-solid fa-pencil"></i></a></td>
+                                        <td><a href="{{route('admin.comment.edit', $comment->id)}}" class="text-success"><i class="fa-solid fa-pencil"></i></a></td>
                                         <td>
-                                            <form action="{{route('admin.ru.comment.destroy', $comment->id)}}" method="POST">
+                                            <form action="{{route('admin.comment.destroy', $comment->id)}}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="border-0 bg-transparent">

@@ -63,9 +63,6 @@
 
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                 <label class="btn btn-outline-warning" for="btnradio2"><a href="{{route('ru.post.index')}}">Русский язык</a></label>
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                <label class="btn btn-outline-warning" for="btnradio3"><a href="{{route('en.post.index')}}">English</a></label>
             </div>
         </div>
         <div class="row py-5">

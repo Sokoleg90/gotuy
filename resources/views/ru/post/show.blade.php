@@ -65,7 +65,7 @@
                         </div>
                         <div class="link-animated d-flex flex-column justify-content-start">
                             @foreach($categories as $category)
-                                <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="{{route('ru.category.post.index', $category->id)}}"><i
+                                <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="{{route('category.post.index', $category->id)}}"><i
                                         class=""></i>{{$category->title}}</a>
                             @endforeach
                         </div>
@@ -80,7 +80,7 @@
                             <div class="d-flex rounded overflow-hidden mb-3">
                                 <img class="img-fluid" src="{{asset('storage/' . $post->preview_image)}}"
                                      style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                                <a href="{{route('ru.post.show', $post->id)}}" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">{{$post->title}}</a>
+                                <a href="{{route('post.show', $post->id)}}" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">{{$post->title}}</a>
                             </div>
                         @endforeach
                     </div>
