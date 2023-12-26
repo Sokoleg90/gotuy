@@ -54,19 +54,12 @@
 <!-- Spinner End -->
 
 <!-- Navbar Start -->
-<div class="container-fluid position-relative p-0 ">
-    <div class="container-fluid bg-primary py-5 bg-header">
-        <div class="d-grid gap-2 d-md-flex justify-content-between">
+<div class="container-fluid position-relative p-0">
+    <div class="container-fluid py-5 bg-header">
+        <div class="bg-dark">
             <div>
                 <small class="text-light mx-4"><i class="fa fa-envelope-open me-2"></i>gotuy.in.ua@gmail.com</small>
                 <a class="btn btn-sm btn-outline-light rounded-circle" href="https://www.youtube.com/@gotuy"><i class="fab fa-youtube fw-bold"></i>YouTube</a>
-            </div>
-            <div class="btn-group" role="group">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked="">
-                <label class="btn btn-outline-warning" for="btnradio1">Українська мова</label>
-
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-warning" for="btnradio2"><a href="{{route('ru.post.index')}}">Русский язык</a></label>
             </div>
         </div>
         <div class="row py-5">

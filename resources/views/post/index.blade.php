@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
     <!-- Blog Start -->
-    <div class="container-fluid py-5 bg-light">
+    <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row g-5">
                 <!-- Blog list Start -->
