@@ -14,9 +14,7 @@ class IndexController extends Controller
         $data = [];
         $data['usersCount'] = User::all()->count();
         $data['postsCount'] = Post::all()->count();
-        $data['ruPostsCount'] = \App\Models\Ru\Post::all()->count();
         $data['categoriesCount'] = Category::all()->count();
-        $data['ruCategoriesCount'] = \App\Models\Ru\Category::all()->count();
         return view('admin.main.index', compact('data'));
     }
 }

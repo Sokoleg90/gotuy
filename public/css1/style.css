@@ -473,10 +473,9 @@ h6,
 }
 
 .bg-header {
-    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/ukrajinskij-vishitij-rushnik.jpg) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/baner-grudinka.jpg) center center no-repeat;
     background-size: cover;
 }
-
 
 
 .link-animated a {

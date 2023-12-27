@@ -86,13 +86,15 @@
                             </div>
                             <div class="form-group w-50">
                                 <label>Выберите категорию</label>
-                                <select name="category_id" class="form-control">
-                                    @foreach($categories as $category)
-                                        <option value={{$category->id}}
-                                            {{$category->id == $post->category_id ? 'selected' : ''}}
-                                        >{{$category->title}}</option>
-                                    @endforeach
-                                </select>
+                                <label>
+                                    <select name="category_id" class="form-control">
+                                        @foreach($categories as $category)
+                                            <option value={{$category->id}}
+                                                {{$category->id == $post->category_id ? 'selected' : ''}}
+                                            >{{$category->title}}</option>
+                                        @endforeach
+                                    </select>
+                                </label>
                                 @error('category_id')
                                 <div class="text-danger">{{$message}}</div>
                                 @enderror

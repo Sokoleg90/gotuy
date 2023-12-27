@@ -30,24 +30,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-xl-3">
-                <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                    <i class="fa-solid fa-tags"></i>
-                    <div class="ms-3">
-                        <p>Посты на русском языке</p>
-                        <h3>{{$data['ruPostsCount']}}</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-xl-3">
-                <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                    <i class="fa-solid fa-tags"></i>
-                    <div class="ms-3">
-                        <p>Категории на русском языке</p>
-                        <h3>{{ $data['ruCategoriesCount']}}</h3>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <!-- Sale & Revenue End -->

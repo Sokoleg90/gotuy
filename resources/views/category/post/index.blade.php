@@ -8,8 +8,8 @@
                 <div class="col-lg-8">
                     <div class="row g-5">
                         @foreach($posts as $post)
-                            <div class="col-md-6">
-                                <div class="blog-item bg-light rounded overflow-hidden">
+                            <div>
+                                <div class="bg-light rounded overflow-hidden">
                                     <div class="blog-img position-relative overflow-hidden">
                                         <a href="{{route('post.show', $post->id)}}">
                                             <img class="img-fluid" src="{{asset('storage/' . $post->preview_image)}}" alt="">

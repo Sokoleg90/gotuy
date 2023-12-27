@@ -1,16 +1,16 @@
 @extends('layouts.main')
 @section('content')
     <!-- Blog Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5 bg-light">
         <div class="container py-5">
             <div class="row g-5">
                 <!-- Blog list Start -->
                 <div class="col-lg-8">
                     <div class="row g-5">
                         @foreach($posts as $post)
-                            <div class="col-md-4">
-                                <div class="blog-item bg-light rounded overflow-hidden">
-                                    <div class="blog-img position-relative">
+                            <div>
+                                <div class="bg-light rounded overflow-hidden">
+                                    <div class="position-relative">
                                         <a href="{{route('post.show', $post->id)}}">
                                             <img class="img-fluid" src="{{asset('storage/' . $post->preview_image)}}" alt="">
                                         </a>
