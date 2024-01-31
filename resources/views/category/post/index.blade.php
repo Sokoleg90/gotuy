@@ -6,7 +6,7 @@
             <div class="row g-5">
                 <!-- Blog list Start -->
                 <div class="col-lg-8">
-                    <div class="row g-5">
+                    <div class="">
                         @foreach($posts as $post)
                             <div>
                                 <div class="bg-light rounded overflow-hidden">
