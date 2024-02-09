@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <link rel="alternate" hreflang="uk" href="https://www.gotuy.in.ua/"/>
