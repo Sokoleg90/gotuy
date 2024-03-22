@@ -55,7 +55,7 @@
 
 <!-- Navbar Start -->
 <div class="container-fluid position-relative p-0 ">
-    <div class="container-fluid bg-primary py-5 bg-header">
+    <div class="container-fluid py-5 bg-header">
         <div class="d-grid gap-2 d-md-flex justify-content-between">
             <div>
                 <small class="text-light mx-4"><i class="fa fa-envelope-open me-2"></i>gotuy.in.ua@gmail.com</small>
