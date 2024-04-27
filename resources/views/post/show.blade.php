@@ -32,20 +32,20 @@
                     <!-- Comment Form Start -->
                     <div class="bg-light rounded p-5">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Залиште свій коментар</h3>
+                            <h3 class="mb-0">Залиши свій коментар</h3>
                         </div>
                         <form action="{{route('post.comment.store', $post->id)}}" method="post">
                             @csrf
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-white border-0" placeholder="Ваше ім'я"
+                                    <input type="text" class="form-control bg-white border-0" placeholder="Введіть ваше ім'я"
                                            style="height: 55px;" name="name">
                                 </div>
                             </div>
 
                             <div class="col-12">
                                     <textarea class="form-control bg-white border-0 mt-3" rows="5"
-                                              placeholder="Ваш коментар" name="message"></textarea>
+                                              placeholder="Введіть ваш коментар" name="message"></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3 mt-3" type="submit">Надіслати коментар</button>
