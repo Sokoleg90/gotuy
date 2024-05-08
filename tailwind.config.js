@@ -6,6 +6,11 @@ module.exports = {
         "./resources/**/*.vue",
     ],
   theme: {
+      fontFamily:
+          {
+              'pacifico': ['"Pacifico"'],
+              'alice': ['"Alice"'],
+          },
     extend: {},
   },
   plugins: [],

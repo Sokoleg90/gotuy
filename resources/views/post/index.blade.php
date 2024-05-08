@@ -1,70 +1,43 @@
 @extends('layouts.main')
 @section('content')
     <!-- Blog Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <!-- Blog list Start -->
-                <div class="col-lg-8">
-                    <div class="row g-5">
-                        @foreach($posts as $post)
-                            <div class="col-md-4">
-                                <div class="blog-item bg-light rounded overflow-hidden">
-                                    <div class="blog-img position-relative">
-                                        <a href="{{route('post.show', $post->id)}}">
-                                            <img class="img-fluid" src="{{asset('storage/' . $post->preview_image)}}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="p-4">
-                                        <a href="{{route('post.show', $post->id)}}" class="blog-post-permalink">
-                                            <h4 class="mb-3">{{$post->title}}</h4>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+    <!-- component -->
+    @foreach($posts as $post)
+    <section class="bg-white">
+        <div class="container px-6 py-10 mx-auto">
+            <div class="mt-8 lg:-mx-6 lg:flex lg:items-center">
+                <a href="{{route('post.show', $post->id)}}">
+                    <img class="img-fluid" src="{{asset('storage/' . $post->preview_image)}}" alt="">
+                </a>
+
+                <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+                    @foreach($categories as $category)
+                    <a href="{{route('category.post.index', $category->id)}}" class="text-sm text-blue-500 uppercase">{{$category->title}}</a>
                         @endforeach
-                    </div>
+                    <a href="{{route('post.show', $post->id)}}" class="block mt-4 text-2xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl">
+                        {{$post->title}}
+                    </a>
 
-                    <div class="m-auto">
-                        {{$posts->links('vendor.pagination.bootstrap-5-ua')}}
-                    </div>
+                    <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veritatis sint autem nesciunt,
+                        laudantium quia tempore delect
+                    </p>
 
+                    <a href="#" class="inline-block mt-2 text-blue-500 underline hover:text-blue-400">Read more</a>
+
+                    <div class="flex items-center mt-6">
+                        <img class="object-cover object-center w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
+
+                        <div class="mx-4">
+                            <h1 class="text-sm text-gray-700 dark:text-gray-200">Amelia. Anderson</h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Lead Developer</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- Blog list End -->
-                <!-- Sidebar Start -->
-                <div class="col-lg-4">
-                    <!-- Category Start -->
-                    <div class="mb-5">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Категорії рецептів</h3>
-                        </div>
-                        <div class="link-animated d-flex flex-column justify-content-start">
-                            @foreach($categories as $category)
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="{{route('category.post.index', $category->id)}}">{{$category->title}}</a>
-                            @endforeach
-                        </div>
-                    </div>
-                    <!-- Category End -->
-                    <!-- Recent Post Start -->
-                    <div class="mb-5">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Приготуй навмання</h3>
-                        </div>
-                        @foreach($randomPosts as $post)
-                        <div class="d-flex rounded overflow-hidden mb-3">
-                            <img class="img-fluid" src="{{asset('storage/' . $post->preview_image)}}"
-                                 style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                            <a href="{{route('post.show', $post->id)}}" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">{{$post->title}}</a>
-                        </div>
-                        @endforeach
-                    </div>
-                    <!-- Recent Post End -->
-
-                </div>
-                <!-- Sidebar End -->
             </div>
         </div>
-    </div>
+    </section>
+    @endforeach
     <!-- Blog End -->
 @endsection
 
