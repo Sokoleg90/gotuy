@@ -40,7 +40,7 @@
                         </div>
                         <div class="link-animated d-flex flex-column justify-content-start">
                             @foreach($categories as $category)
-                            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="{{route('category.post.index', $category->id)}}">{{$category->title}}</a>
+                            <a class="h5 fw-semi-bold rounded py-2 px-3 mb-2" href="{{route('category.post.index', $category->id)}}">{{$category->title}}</a>
                             @endforeach
                         </div>
                     </div>
