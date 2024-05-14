@@ -26,15 +26,18 @@
         <header class="header bg-gray-800 shadow py-4 px-4">
             <div class="header-content flex items-center flex-row">
                 <div class="flex ml-auto">
-                    <button type="button" class="text-white text-3xl hover:text-4xl hover:text-red-700">Выйти</button>
+                    <form action="{{route('logout')}}" method="post">
+                        @csrf
+                        <input class="text-white text-3xl hover:text-4xl hover:text-red-700" type="submit" value="Выйти">
+                    </form>
                 </div>
             </div>
         </header>
         <div class="main-content flex flex-col flex-grow p-4 bg-gray-500">
             @yield('content')
         </div>
-        <footer class="footer px-4 py-6 bg-gray-800">
-            <div class="footer-content">
+        <footer class="px-4 py-6 bg-gray-800">
+            <div>
                 <p class="text-sm text-white text-center">© Gotuy.in.ua 2024. All rights reserved.</p>
             </div>
         </footer>

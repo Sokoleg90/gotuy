@@ -17,9 +17,11 @@
                     </a>
 
                     <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
-                        {!! \Illuminate\Support\Str::words($post->content, 20, $end='...') !!}
+                        {!! \Illuminate\Support\Str::words($post->content, 80, $end='...') !!}
                     </p>
-                    <a href="{{route('post.show', $post->id)}}" class="inline-block mt-2 text-emerald-800 underline hover:text-emerald-400">Переглянути весь рецепт</a>
+                    <button class="p-2 mt-2 rounded bg-emerald-800 text-white hover:bg-emerald-400 hover:text-black">
+                    <a href="{{route('post.show', $post->id)}}">Переглянути весь рецепт</a>
+                    </button>
                 </div>
             </div>
         </div>

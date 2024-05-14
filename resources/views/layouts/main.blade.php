@@ -13,6 +13,7 @@
     @vite('resources/css/app.css')
 </head>
 <body>
+<div class="bg-amber-100">
 <div class="bg-[url('/public/img/baner-grudinka.jpg')] bg-center h-[600px]">
     <header class="absolute inset-x-0 top-0 z-50 bg-black bg-opacity-60">
         <nav class="flex items-center justify-center p-6 lg:px-8" aria-label="Global">
@@ -41,5 +42,6 @@
         </p>
     </div>
 </footer>
+</div>
 </body>
 </html>
