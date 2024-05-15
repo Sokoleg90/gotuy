@@ -72,7 +72,7 @@
                 </div>
             </div>
 
- develop
+
             <div class="border-b border-gray-900/10 pb-12">
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                     <div class="sm:col-span-3">
@@ -109,80 +109,4 @@
             </button>
         </div>
     </form>
-
-                        <form action="{{route('admin.post.store')}}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <div class="form-group w-25">
-                                <input type="text" class="form-control" name="title" placeholder="Название поста"
-                                value="{{old('title')}}"
-                                >
-                            @error('title')
-                                <div class="text-danger">{{$message}}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group mt-3">
-                                <textarea id="summernote" name="content">
-                                    {{old('content')}}
-                                </textarea>
-                                @error('content')
-                                <div class="text-danger">{{$message}}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group w-50">
-                                <label for="exampleInputFile">Добавить превью</label>
-                                <div class="input-group">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="preview_image">
-                                        <label class="custom-file-label">Выберите изображение</label>
-                                    </div>
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">Загрузка</span>
-                                    </div>
-                                </div>
-                                @error('preview_image')
-                                <div class="text-danger">{{$message}}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group w-50">
-                                <label for="exampleInputFile">Добавить главное изображение</label>
-                                <div class="input-group">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="main_image">
-                                        <label class="custom-file-label">Выберите изображение</label>
-                                    </div>
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">Загрузка</span>
-                                    </div>
-                                </div>
-                                @error('main_image')
-                                <div class="text-danger">{{$message}}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group w-50">
-                                <label>Выберите категорию</label>
-                                <label>
-                                    <select name="category_id" class="form-control">
-                                        @foreach($categories as $category)
-                                        <option value={{$category->id}}
-                                        {{$category->id == old('category_id') ? 'selected' : ''}}
-                                        >{{$category->title}}</option>
-                                        @endforeach
-                                    </select>
-                                </label>
-                                @error('category_id')
-                                <div class="text-danger">{{$message}}</div>
-                                @enderror
-                            </div>
-                            <div class="form-group mb-5">
-                            <input type="submit" class="btn btn-primary" value="Добавить">
-                            </div>
-                        </form>
-                    </div><!--./col -->
-                </div><!--/.row -->
-            </div><!--container-fluid -->
-        </section>
-        <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
- master
 @endsection

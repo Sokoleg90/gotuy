@@ -1,7 +1,6 @@
 @extends('layouts.main')
 @section('content')
     <!-- Blog Start -->
- develop
     <!-- component -->
     <div class="max-w-screen-xl mx-auto">
         <!-- header ends here -->
@@ -14,61 +13,6 @@
 
                 </div>
             </div>
-
-    <div class="container-fluid py-5 bg-light">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <!-- Blog Detail Start -->
-                    <div class="mb-5">
-                        <img class="img-fluid w-100 rounded mb-5" src="{{asset('storage/' . $post->main_image)}}" alt="">
-                        <h1 class="mb-4">{{$post->title}}</h1>
-                        <div>
-                            {!! $post->content !!}
-                        </div>
-                    </div>
-                    <!-- Blog Detail End -->
-                    <!-- Comment List Start -->
-                    <div class="mb-5">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Коментарі ({{$post->comments->count()}})</h3>
-                        </div>
-                        @foreach($post->comments as $comment)
-                        <div class="d-flex mb-4">
-                            <div class="ps-3">
-                                <h6><a href="">{{$comment->name}}</a> <small><i>{{$comment->dateAsCarbon->diffForHumans()}}</i></small></h6>
-                                {{$comment->message}}
-                            </div>
-                        </div>
-                        @endforeach
-                        </div>
-                    <!-- Comment List End -->
-                    <!-- Comment Form Start -->
-                    <div class="bg-light rounded p-5">
-                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                            <h3 class="mb-0">Залиши свій коментар</h3>
-                        </div>
-                        <form action="{{route('post.comment.store', $post->id)}}" method="post">
-                            @csrf
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-white border-0" placeholder="Введіть ваше ім'я"
-                                           style="height: 55px;" name="name">
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                    <textarea class="form-control bg-white border-0 mt-3" rows="5"
-                                              placeholder="Введіть ваш коментар" name="message"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3 mt-3" type="submit">Надіслати коментар</button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Comment Form End -->
-                    </div>
- master
 
             <div class="px-4 lg:px-0 mt-8 text-black text-lg leading-relaxed">
                 <h2 class="mb-4 text-4xl font-semibold text-black leading-tight">
@@ -123,15 +67,15 @@
                 </p>
                 <!--comment 1-->
                 @foreach($post->comments as $comment)
-                <div class="flex  items-center w-full px-6 py-6 mx-auto mt-10 border border-amber-200 rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
+                    <div class="flex  items-center w-full px-6 py-6 mx-auto mt-10 border border-amber-200 rounded-lg sm:px-8 md:px-12 sm:py-8 sm:shadow lg:w-5/6 xl:w-2/3">
 
-                    <div><h3 class="text-lg font-bold text-slate-700 sm:text-xl md:text-2xl">{{$comment->name}}</h3>
-                        <p class="text-sm font-bold text-green-600">{{$comment->dateAsCarbon->diffForHumans()}}</p>
-                        <p class="mt-2 text-base text-black sm:text-lg md:text-normal">
-                            {{$comment->message}}
-                        </p>
+                        <div><h3 class="text-lg font-bold text-slate-700 sm:text-xl md:text-2xl">{{$comment->name}}</h3>
+                            <p class="text-sm font-bold text-green-600">{{$comment->dateAsCarbon->diffForHumans()}}</p>
+                            <p class="mt-2 text-base text-black sm:text-lg md:text-normal">
+                                {{$comment->message}}
+                            </p>
+                        </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </main>
