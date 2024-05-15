@@ -17,6 +17,7 @@
                                 <div class="text-red-600">{{$message}}</div>
                                 @enderror
                             </div>
+ develop
                         </div>
                     </div>
 
@@ -48,6 +49,45 @@
                             @enderror
                         </div>
                     </div>
+
+                            <div class="form-group w-50">
+                                <label for="exampleInputFile">Добавить главное изображение</label>
+                                <div class="w-50 mb-2">
+                                    <img src="{{url('storage/' . $post->main_image)}}" alt="main_image" class="w-50">
+                                </div>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="main_image">
+                                        <label class="custom-file-label">Выберите изображение</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Загрузка</span>
+                                    </div>
+                                </div>
+                                @error('main_image')
+                                <div class="text-danger">{{$message}}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group w-50">
+                                <label>Выберите категорию</label>
+                                <label>
+                                    <select name="category_id" class="form-control">
+                                        @foreach($categories as $category)
+                                            <option value={{$category->id}}
+                                                {{$category->id == $post->category_id ? 'selected' : ''}}
+                                            >{{$category->title}}</option>
+                                        @endforeach
+                                    </select>
+                                </label>
+                                @error('category_id')
+                                <div class="text-danger">{{$message}}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group mb-5">
+                                <input type="submit" class="btn btn-primary" value="Обновить">
+                            </div>
+                        </form>
+ master
 
                     <div class="col-span-full">
                         <label class="block text-sm font-medium leading-6 text-gray-900">Виберіть основну картинку</label>

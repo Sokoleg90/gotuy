@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('content')
     <!-- Blog Start -->
+ develop
     <!-- component -->
     @foreach($posts as $post)
     <section class="bg-amber-100">
@@ -11,6 +12,31 @@
                 </a>
                 <div class="mt-6 px-10 lg:w-1/2 lg:mt-0 lg:mx-6 ">
                     <a href="{{route('category.post.index', $post->category_id)}}" class="text-sm text-red-700 uppercase">{{$post->category->title}}</a>
+
+    <div class="container-fluid py-5 bg-white">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Blog list Start -->
+                <div class="col-lg-8">
+                    <div class="">
+                        @foreach($posts as $post)
+                            <div>
+                                <div class="rounded overflow-hidden">
+                                    <div class="position-relative">
+                                        <a href="{{route('post.show', $post->id)}}">
+                                            <img class="img-fluid" src="{{asset('storage/' . $post->preview_image)}}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="p-4">
+                                        <a href="{{route('post.show', $post->id)}}" class="blog-post-permalink">
+                                            <h4 class="mb-3">{{$post->title}}</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+ master
 
                     <a href="{{route('post.show', $post->id)}}" class="block mt-4 text-3xl font-semibold text-gray-800 hover:underline dark:text-white md:text-3xl">
                         {{$post->title}}

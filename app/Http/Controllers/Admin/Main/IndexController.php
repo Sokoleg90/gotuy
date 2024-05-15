@@ -11,10 +11,19 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
+ develop
         $data = [];
         $data['usersCount'] = User::all()->count();
         $data['postsCount'] = Post::all()->count();
         $data['categoriesCount'] = Category::all()->count();
         return view('admin.main.index', compact('data'));
+
+//        $data = [];
+//        $data['usersCount'] = User::all()->count();
+//        $data['postsCount'] = Post::all()->count();
+//        $data['categoriesCount'] = Category::all()->count();
+//        return view('admin.main.index', compact('data'));
+        return redirect()->route('admin.post.index');
+ master
     }
 }
