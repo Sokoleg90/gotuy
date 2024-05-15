@@ -1,42 +1,42 @@
 @extends('admin.layouts.main')
 @section('content')
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0">Комментарии</h1>
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item active">Комментарии</li>
-                    </ol>
-                </div><!--col -->
-            </div><!--/.row -->
-            <!-- Small boxes (Stat box) -->
-            <div class="row">
-                <div class="col-12">
-                    <form action="{{route('admin.comment.update', $comment->id)}}" method="POST" class="w-50">
-                        @csrf
-                        @method('PATCH')
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" cols="30" rows="10">{{$comment->message}}</textarea>
-                            @error('message')
-                            <div class="text-danger">Эта строка должна быть заполнена</div>
-                            @enderror
+    <form action="{{route('admin.comment.update', $comment->id)}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('PATCH')
+        <div class="space-y-12">
+            <div class="border-b border-gray-900/10 pb-12">
+                <h2 class="font-semibold text-3xl leading-7 text-gray-900">Редагувати рецепт</h2>
+                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                    <div class="sm:col-span-4">
+                        <label class="block font-medium leading-6 text-gray-900">Назва рецепта</label>
+                        <div class="mt-2">
+                            <div class="flex sm:max-w-md">
+                                <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm"></span>
+                                <input type="text" name="message" autocomplete="message"
+                                       class="block flex-1 py-1.5 rounded-md text-gray-900 placeholder:text-gray-700 focus:ring-0 sm:text-sm sm:leading-6"
+                                       placeholder="" value="{{old('message', $comment->message)}}">
+                                @error('message')
+                                <div class="text-red-600">{{$message}}</div>
+                                <div class="text-red-700">Ця строка повинна бути заповнена</div>
+                                @enderror
+                            </div>
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Обновить">
-                    </form>
+                    </div>
 
-                </div><!--./col -->
+                    <div class="mt-6 flex items-center justify-start gap-x-6">
+                        <a href="{{route('admin.category.index')}}">
+                            <button type="button"
+                                    class="rounded-md bg-red-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                Відміна
+                            </button>
+                        </a>
+                        <button type="submit"
+                                class="rounded-md bg-emerald-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            Редагувати
+                        </button>
+                    </div>
+                </div>
             </div>
-            <!-- /.row -->
-
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
+        </div>
+    </form>
 @endsection

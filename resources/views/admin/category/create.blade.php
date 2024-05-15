@@ -1,52 +1,33 @@
 @extends('admin.layouts.main')
 @section('content')
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0">Добавление категории</h1>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{route('admin.main.index')}}">Главная</a></li>
-                            <li class="breadcrumb-item"><a href="{{route('admin.category.index')}}">Категории</a></li>
-                            <li class="breadcrumb-item active">Создание категории</li>
-                        </ol>
-                    </div><!--col -->
-                </div><!--/.row -->
-            </div><!--/.container-fluid -->
-        </section><!--/.content-header -->
-
-        <!--Main content -->
-        <section class="content">
-            <div class="container-fluid">
-                <!--Small boxes (Start box) -->
-                <div class="row">
-
-                    <div class="col-12">
-
-
-                        <form action="{{route('admin.category.store')}}" method="POST" class="w-25">
-                            @csrf
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="title" placeholder="Название категории">
-                            @error('title')
-                                <div class="text-danger">Эта строка должна быть заполнена</div>
+    <form action="{{route('admin.category.store')}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="space-y-12">
+            <div class="border-b border-gray-900/10 pb-12">
+                <h2 class="font-semibold text-3xl leading-7 text-gray-900">Додати нову категорію рецептів</h2>
+                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                    <div class="sm:col-span-4">
+                        <label class="block font-medium leading-6 text-gray-900">Назва категорії</label>
+                        <div class="mt-2">
+                            <div class="flex sm:max-w-md">
+                                <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm"></span>
+                                <input type="text" name="title" id="title" autocomplete="title" class="block flex-1 py-1.5 rounded-md text-gray-900 placeholder:text-gray-700 focus:ring-0 sm:text-sm sm:leading-6" placeholder="" value="{{old('title')}}">
+                                @error('title')
+                                <div class="text-red-600">{{$message}}</div>
                                 @enderror
                             </div>
-                            <input type="submit" class="btn btn-primary m-2" value="Добавить">
-                        </form>
+                        </div>
+                    </div>
 
-                    </div><!--./col -->
-                </div><!--/.row -->
-            </div><!--container-fluid -->
+                    </div>
+                </div>
+            </div>
 
-
-        </section>
-        <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
+        <div class="mt-6 flex items-center justify-start gap-x-6">
+            <a href="{{route('admin.category.index')}}">
+                <button type="button" class="rounded-md bg-red-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Відміна</button>
+            </a>
+            <button type="submit" class="rounded-md bg-emerald-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Додати</button>
+        </div>
+    </form>
 @endsection
