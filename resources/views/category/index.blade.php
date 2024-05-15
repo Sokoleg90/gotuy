@@ -1,13 +1,11 @@
-
 @extends('layouts.main')
 @section('content')
-    <main class="blog">
-        <div class="container">
-            <h1 class="edica-page-title" data-aos="fade-up">Категории</h1>
-            <section class="featured-posts-section">
-                <ul>
+    <main>
+        <div class="bg-amber-100">
+            <section>
+                <ul class="flex flex-col items-center">
                     @foreach($categories as $category)
-                    <li><a href="#">{{$category->title}}</a></li>
+                    <li class="text-4xl my-3 text-black font-alice hover:text-5xl hover:text-red-700"><a href="{{route('category.post.index', $category->id)}}">{{$category->title}}</a></li>
                     @endforeach
                 </ul>
             </section>

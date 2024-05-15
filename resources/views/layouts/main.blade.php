@@ -1,3 +1,8 @@
+ develop
+<!doctype html>
+<html>
+<head>
+=======
 <!DOCTYPE html>
 <html lang="uk">
 
@@ -14,18 +19,19 @@
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7484873602226534"
             crossorigin="anonymous"></script>
+ master
     <meta charset="utf-8">
-    <title>Готуй в Україні</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Смачні страви, приготовані в Україні" name="description">
-
-    <!-- Favicon -->
+    <title>Готуй в Україні</title>
     <link rel="icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
-
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ develop
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&Alice" rel="stylesheet">
+    @vite('resources/css/app.css')
+
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Caveat:wght@700&display=swap" rel="stylesheet">
     <!-- Icon Font Stylesheet -->
@@ -44,9 +50,25 @@
     <link href="{{asset('css1/style.css')}}" rel="stylesheet">
 
 
+ master
 </head>
-
 <body>
+ develop
+<div class="bg-amber-100">
+<div class="bg-[url('/public/img/baner-grudinka.jpg')] bg-center h-[600px]">
+    <header class="absolute inset-x-0 top-0 z-50 bg-black bg-opacity-60">
+        <nav class="flex items-center justify-center p-6 lg:px-8" aria-label="Global">
+                <a href="{{route('post.index')}}" class="font-alice text-3xl leading-6 text-white px-5">Головна сторінка</a>
+                <a href="{{route('category.index')}}" class="font-alice text-3xl leading-6 text-white px-5">Категорії рецептів</a>
+                <a href="https://www.youtube.com/@gotuy" class="font-alice text-3xl leading-6 text-white px-5 ">Наш Ютуб канал</a>
+        </nav>
+    </header>
+
+    <div class="relative isolate px-6 pt-14 lg:px-8 bg-black bg-opacity-50">
+        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+            <div class="text-center">
+                <h1 class="text-8xl tracking-tight text-white font-pacifico">Готуй в Україні</h1>
+
 <!-- Spinner Start -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
     <div class="spinner"></div>
@@ -66,51 +88,27 @@
             <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                 <h1 class="main-title display-4 text-white">Готуй в Україні</h1>
                 <a href="{{route('post.index')}}" class="h5 text-white">Головна сторінка</a>
+ master
             </div>
         </div>
     </div>
 </div>
+ develop
+
 <!-- Navbar End -->
 
+ master
 @yield('content')
 
-
-<!-- Footer Start -->
-<div class="container-fluid text-white" style="background: #061429;">
-    <div class="container text-center">
-        <div class="row justify-content-end">
-            <div class="col-lg-8 col-md-6">
-                <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                    <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">gotuy.in.ua</a>. All Rights Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
-                </div>
-            </div>
-        </div>
+<footer class="footer footer-center w-full p-4 bg-gray-800 text-white">
+    <div class="text-center">
+        <p>
+            © 2024
+            <a class="font-semibold" href="https://www.gotuy.in.ua">Готуй в Україні</a>
+            . All rights reserved.
+        </p>
     </div>
+</footer>
 </div>
-<!-- Footer End -->
-
-
-<!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-<!-- JavaScript Libraries -->
-<script src="{{asset('https://code.jquery.com/jquery-3.4.1.min.js')}}"></script>
-<script src="{{asset('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('lib1/wow/wow.min.js')}}"></script>
-<script src="{{asset('lib1/easing/easing.min.js')}}"></script>
-<script src="{{asset('lib1/waypoints/waypoints.min.js')}}"></script>
-<script src="{{asset('lib1/counterup/counterup.min.js')}}"></script>
-<script src="{{asset('lib1/owlcarousel/owl.carousel.min.js')}}"></script>
-<script src="{{asset('lib1/animate/animate.min.css')}}"></script>
-<script src="{{asset('lib1/animate/animate.min.css')}}"></script>
-
-<!-- Template Javascript -->
-
-<script src="{{asset('js1/main.js')}}"></script>
 </body>
-
 </html>

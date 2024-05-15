@@ -11,9 +11,13 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
+ develop
+        $posts = Post::paginate(6);
+
         $posts = Post::orderBy('created_at', 'DESC')->paginate(9);
         $randomPosts = Post::get()->random(6);
+ master
         $categories = Category::all();
-        return view('post.index', compact('posts', 'randomPosts', 'categories'));
+        return view('post.index', compact('posts', 'categories'));
     }
 }
