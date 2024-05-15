@@ -18,7 +18,7 @@
                 <h2 class="mb-4 text-4xl font-semibold text-black leading-tight">
                     {{$post->title}}
                 </h2>
-               {{$post->content}}
+                {!! $post->content !!}
             </div>
 
             <!-- component -->
