@@ -47,7 +47,7 @@
                             <input type="file" name="preview_image"
                                    class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
                             @error('preview_image')
-                            <div class="text-danger">{{$message}}</div>
+                            <div class="text-red-700">{{$message}}</div>
                             @enderror
                         </div>
                     </div>
