@@ -17,9 +17,9 @@
     <div class="bg-[url('/public/img/baner-grudinka.jpg')] bg-center h-[600px]">
         <header class="absolute inset-x-0 top-0 z-50 bg-black bg-opacity-60">
             <nav class="flex items-center justify-center p-6 lg:px-8" aria-label="Global">
-                <a href="{{route('post.index')}}" class="font-alice text-3xl leading-6 text-white px-5">Головна сторінка</a>
-                <a href="{{route('category.index')}}" class="font-alice text-3xl leading-6 text-white px-5">Категорії рецептів</a>
-                <a href="https://www.youtube.com/@gotuy" class="font-alice text-3xl leading-6 text-white px-5 ">Наш Ютуб канал</a>
+                <a href="{{route('post.index')}}" class="font-alice text-2xl leading-6 text-white px-3">Головна сторінка</a>
+                <a href="{{route('category.index')}}" class="font-alice text-2xl leading-6 text-white px-3">Категорії рецептів</a>
+                <a href="https://www.youtube.com/@gotuy" class="font-alice text-2xl leading-6 text-white px-3">Наш Ютуб канал</a>
             </nav>
         </header>
 
