@@ -10,12 +10,12 @@ use Illuminate\Http\Request;
 
 class ShowController extends Controller
 {
-    public function __invoke(Post $post)
+    public function __invoke(Post $post, $slug)
     {
         $date = Carbon::parse($post->created_at);
+        $post = Post::where('slug', $slug)
+            ->firstOrFail();
         Carbon::setLocale('uk_UK');
-        $categories = Category::all();
-        $randomPosts = Post::get()->random(6);
-        return view('post.show', compact('post', 'date', 'randomPosts', 'categories'));
+        return view('post.show', compact('post', 'date', 'post'));
     }
 }

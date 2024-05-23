@@ -8,9 +8,8 @@
             <div class="mb-4 md:mb-0 w-full mx-auto relative h-96">
                 <img src="{{asset('storage/' . $post->main_image)}}" class="absolute left-0 top-0 w-full h-full z-0 object-cover"/>
                 <div class="p-2 absolute bottom-0 left-0 z-20">
-                    <a href="{{route('category.post.index', $post->category_id)}}"
+                    <a href="{{route('category.post.index', $post->category->id)}}"
                        class="px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mb-2">{{$post->category->title}}</a>
-
                 </div>
             </div>
 

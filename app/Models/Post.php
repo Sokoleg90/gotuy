@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -10,6 +11,7 @@ class Post extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    use Sluggable;
 
     protected $table = 'posts';
     protected $guarded = false;
@@ -22,5 +24,14 @@ class Post extends Model
     public function comments()
     {
         return $this->hasMany(Comment::class, 'post_id', 'id');
+    }
+
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
     }
 }

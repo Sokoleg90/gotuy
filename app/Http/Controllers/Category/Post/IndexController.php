@@ -8,11 +8,15 @@ use App\Models\Post;
 
 class IndexController extends Controller
 {
-    public function __invoke(Category $category)
+    public function __invoke(Category $category, $slug)
     {
-        $posts = $category->posts()->orderBy('created_at', 'DESC')->paginate(9);
-        $categories = Category::all();
-        $randomPosts = Post::get()->random(6);
-        return view('category.post.index', compact('posts', 'categories', 'randomPosts'));
+        $posts = $category
+            ->where('slug', $slug)
+            ->firstOrFail()
+            ->posts()
+            ->orderBy('created_at', 'DESC')
+            ->paginate(9);
+
+        return view('category.post.index', compact('posts'));
     }
 }
