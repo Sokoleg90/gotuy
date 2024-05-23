@@ -13,6 +13,6 @@ class IndexController extends Controller
     {
         $posts = Post::orderBy('created_at', 'DESC')->paginate(6);
 
-        return view('post.index', compact('posts', ));
+        return view('post.index', compact('posts'));
     }
 }
